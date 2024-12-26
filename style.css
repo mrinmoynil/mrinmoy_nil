@@ -1,0 +1,81 @@
+/* General page layout */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 120%;	 
+}
+
+/* Left sidebar (non-scrolling section) */
+.sidebar {
+    width: 300px; /* Fixed width for the sidebar */
+    background-color: #f4f4f4;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.sidebar h1, .sidebar p {
+    margin: 10px 0;
+}
+
+/* Right main content section */
+.main-content {
+    margin-left: 300px; /* Matches the fixed width of the sidebar */
+    padding: 20px;
+    box-sizing: border-box;
+    width: calc(100% - 300px); /* Dynamically adjusts to fill the remaining space */
+}
+
+/* Fixed navigation buttons at the top of the right section */
+.nav-buttons {
+    position: fixed;
+    top: 0;
+    left: 300px; /* Starts after the fixed sidebar */
+    right: 0;
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 999;
+}
+
+.nav-buttons a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #444;
+    border-radius: 5px;
+}
+
+.nav-buttons a:hover {
+    background-color: #555;
+}
+
+/* Sections to scroll to */
+section {
+    scroll-margin-top: 60px;
+    margin-top: 10px; /* To give space for fixed nav-buttons */
+    padding: 10px 0;
+}
+
+/* Styling for specific sections */
+#academic, #research, #projects {
+    padding-top: 10px;
+}
+
+/* Profile image styling */
+.profile-image {
+    width: 80%;
+    height: auto; /* Ensure it scales properly */
+    margin-top: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image fits within the circle */
+}
